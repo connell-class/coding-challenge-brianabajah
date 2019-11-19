@@ -1,0 +1,19 @@
+server:
+  port: 8900
+   
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    
+spring:
+  application:
+    name: Shooping Zuul 
+    
+zuul:
+  routes:
+    shoppingls:
+      path: /shoppingls/**
+      service-id: shop
+      strip-prefix: false
+ 
